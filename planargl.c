@@ -240,7 +240,7 @@ void disp_robot(void) //1cm = 0.01
 {	
 	float panjang_body_blakang = 0.18;	//18 cm
 	float lebar_body_blakang = 0.04;	//4 cm
-	float ketebalan_mobil = 0.01;		//0.5 cm
+	float ketebalan_mobil = 0.02;		//0.5 cm
 	float ground_clearence = 0.02; 		//2 cm
 	
 	float ketebalan_roda = 0.01;		//1 cm
