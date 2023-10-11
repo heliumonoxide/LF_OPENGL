@@ -5,7 +5,7 @@
 *  dipersilahkan dengan menuliskan acknowledgement pada
 *    Dr. Abdul Muis, MEng.
 *    Autonomous Control Electronics (ACONICS) Research Group
-*    http://www.ee.ui.ac.id/aconics
+*    httsp://www.ee.ui.ac.id/aconics
 *////////////////////////////////////////////////////////////
 
 #include <stdio.h> 
@@ -383,18 +383,18 @@ void Sim_main(void)
 	
 	if(sum_sensor < 0 || sum_sensor_prev1 < 0 || sum_sensor_prev2 < 0)
 	{
-		q2+=30*DTR; dq2=30*DTR;
+		q2+=10*DTR; dq2=10*DTR;
 	}
 	else if(sum_sensor > 0 || sum_sensor_prev1 > 0 || sum_sensor_prev2 > 0)
 	{
-		q1+=30*DTR; dq1=30*DTR;
+		q1+=10*DTR; dq1=10*DTR;
 	}
 	else if(sum_sensor == 0)
 	{
-		q1+=30*DTR; dq1=30*DTR; q2+=30*DTR; dq2=30*DTR;
+		q1+=10*DTR; dq1=10*DTR; q2+=10*DTR; dq2=10*DTR;
 	}
 	
-	usleep(2000); //delay
+	usleep(500); //delay
 
 	if(counter == 0)
 	{
