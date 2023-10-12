@@ -383,18 +383,18 @@ void Sim_main(void)
 	
 	if(sum_sensor < 0 || sum_sensor_prev1 < 0 || sum_sensor_prev2 < 0)
 	{
-		q2+=10*DTR; dq2=10*DTR;
+		q2+=15*DTR; dq2=10*DTR;
 	}
 	else if(sum_sensor > 0 || sum_sensor_prev1 > 0 || sum_sensor_prev2 > 0)
 	{
-		q1+=10*DTR; dq1=10*DTR;
+		q1+=15*DTR; dq1=10*DTR;
 	}
 	else if(sum_sensor == 0)
 	{
-		q1+=10*DTR; dq1=10*DTR; q2+=10*DTR; dq2=10*DTR;
+		q1+=5*DTR; dq1=60*DTR; q2+=5*DTR; dq2=60*DTR;
 	}
 	
-	usleep(500); //delay
+	usleep(2000); //delay
 
 	if(counter == 0)
 	{
@@ -650,13 +650,13 @@ int main(int argc, char** argv)
    
    /* inisialisasi window */
    init_robot();
-   textureNumber = loadGLTexture("track2.ppm",500,500);
+   textureNumber = loadGLTexture("track4.ppm",500,500);
    main_window();
-   textureNumber = loadGLTexture("track2.ppm",500,500);
+   textureNumber = loadGLTexture("track4.ppm",500,500);
    camera_backtopwindow();
-   textureNumber = loadGLTexture("track2.ppm",500,500);
+   textureNumber = loadGLTexture("track4.ppm",500,500);
    camera_window();
-   textureNumber = loadGLTexture("track2.ppm",500,500);
+   textureNumber = loadGLTexture("track4.ppm",500,500);
    ir_window();
 
    /* Register the function to do all our OpenGL drawing. */

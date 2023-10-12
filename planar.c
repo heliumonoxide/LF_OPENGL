@@ -80,7 +80,7 @@ void animate(int k)
   rx = rx + rv*cos((shi+shi_old)/2.0);
   ry = ry + rv*sin((shi+shi_old)/2.0);
   shi_old = shi;
-  usleep(100000);
+  usleep(10);
   
 } 
 
